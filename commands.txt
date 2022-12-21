@@ -1,0 +1,25 @@
+Chapter 1: What is the Shell?
+date
+cal
+df - display free space on disk
+free - display free memory
+exit (CTRL-D)
+
+Chapter 2: Navigation
+pwd - print working directory
+ls - listing contents of a directory
+cd - change current working directory
+    cd
+    cd -
+    cd ~user_name
+    
+Chapter 3: Exploring the System
+ls /usr     (displays /usr directory)
+ls ~ /usr   (displays user's home directory and /usr directory)
+ls -l       (long format, reveal more detail)
+
+syntax for commands: command -options arguments
+long options consist of a word preceded by 2 dashes (--options)
+
+ls -lt      (display long format sorted by file's modification time)
+ls -lt --reverse (reverse order of the sort)
