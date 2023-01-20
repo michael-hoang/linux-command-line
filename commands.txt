@@ -5,14 +5,16 @@ df - display free space on disk
 free - display free memory
 exit (CTRL-D)
 
+
 Chapter 2: Navigation
 pwd - print working directory
 ls - listing contents of a directory
 cd - change current working directory
-    cd
-    cd -
-    cd ~user_name
+    cd			(change to home directory)
+    cd -		(change to previous working directory)
+    cd ~user_name	(change to home directory of user_name)
     
+
 Chapter 3: Exploring the System
 ls /usr     (displays /usr directory)
 ls ~ /usr   (displays user's home directory and /usr directory)
@@ -21,5 +23,39 @@ ls -l       (long format, reveal more detail)
 syntax for commands: command -options arguments
 long options consist of a word preceded by 2 dashes (--options)
 
-ls -lt      (display long format sorted by file's modification time)
-ls -lt --reverse (reverse order of the sort)
+ls -lt      		(display long format sorted by file's modification time)
+ls -lt --reverse 	(reverse order of the sort)
+ls -a			(list all files including hidden files)
+
+
+Chapter 4: Manipulating Files and Directories
+Press CTRL-S to select files in GUI
+Wildcards:
+*		(matches any characters)
+?		(matches any single character)
+[characters]	(matches any character that's a member of the set characters)
+[!characters]	(matches any character that's not a member of the set characters)
+[[:class:]]	(matches any character that's a memer of the specified class)
+
+
+Character Classes:
+[:alum:]	(matches any alphanumeric character)
+[:alpha:]	(matches any alphabetic character)
+[:digit:]	(matches any numeral)
+[:lower:]	(matches any lowercase letter)
+[:upper:]	(matches any uppercase letter)
+
+Examples:
+*
+g*
+b*.txt
+Data???
+[abc]*
+BACKUP.[0-9][0-9][0-9]
+[[:upper:]]*
+[![:digit:]]*
+*[[:lower:]123]
+
+mkdir dir1 dir2 dir3	(create directories)
+cp item1 item2		(copies item1 (file or directory) to item2 (file or directory))
+cp item1 item2... directory	(copies multiple items into a directory)
